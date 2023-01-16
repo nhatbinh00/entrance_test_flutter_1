@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'colors.dart';
 import 'font_family.dart';
@@ -7,104 +8,89 @@ import 'font_family.dart';
 class AppStyles {
   //function
   static TextStyle textStyleBody1(Color color) => AppStyles.body1.copyWith(
-        fontWeight: FontWeight.w400,
-        fontSize: 16.sp,
-        height: 1.5,
-        color: color,
-        letterSpacing: 0.5.w,
-      );
+    fontWeight: FontWeight.w400,
+    fontSize: 16.sp,
+    height: 1.5,
+    color: color,
+    letterSpacing: 0.5.w,
+  );
   static TextStyle textStyleSubtitle1(Color color) => AppStyles.subtitle1
       .copyWith(color: color, height: 24 / 14, letterSpacing: 0.15.w);
 
   //variable
-  static TextStyle headline2 = TextStyle(
+  static TextStyle headline2 = GoogleFonts.lato(
       fontSize: 60.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.18,
       color: AppColors.black1);
-  static TextStyle headline3 = TextStyle(
+  static TextStyle headline3 = GoogleFonts.lato(
       fontSize: 48.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.18,
       color: AppColors.black1);
-  static TextStyle headline4 = TextStyle(
+  static TextStyle headline4 = GoogleFonts.lato(
       fontSize: 34.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w500,
       letterSpacing: 0.18,
       color: AppColors.black1);
-  static TextStyle headline5 = TextStyle(
+  static TextStyle headline5 = GoogleFonts.lato(
       fontSize: 24.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w500,
       letterSpacing: 0.18,
       color: AppColors.black1);
-  static TextStyle headline6 = TextStyle(
+  static TextStyle headline6 = GoogleFonts.lato(
       fontSize: 18.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.18,
       color: AppColors.black1);
-  static TextStyle headline7 = TextStyle(
+  static TextStyle headline7 = GoogleFonts.lato(
       fontSize: 16.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.18,
       color: AppColors.black1);
-  static TextStyle headline8 = TextStyle(
+  static TextStyle headline8 = GoogleFonts.lato(
       fontSize: 14.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.18,
       color: AppColors.black1);
-  static TextStyle headline9 = TextStyle(
+  static TextStyle headline9 = GoogleFonts.lato(
       fontSize: 12.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.18,
       color: AppColors.black1);
-  static TextStyle headline10 = TextStyle(
+  static TextStyle headline10 = GoogleFonts.lato(
       fontSize: 10.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.18,
       color: AppColors.black1);
-  static TextStyle headline11 = TextStyle(
+  static TextStyle headline11 = GoogleFonts.lato(
       fontSize: 13.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.18,
       color: AppColors.black1);
 
-  static TextStyle subtitle1 = TextStyle(
+  static TextStyle subtitle1 = GoogleFonts.lato(
       fontSize: 14.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.15,
       color: AppColors.black3);
-  static TextStyle subtitle2 = TextStyle(
+  static TextStyle subtitle2 = GoogleFonts.lato(
       fontSize: 12.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.15,
       color: AppColors.black3);
-  static TextStyle body1 = TextStyle(
+  static TextStyle body1 = GoogleFonts.lato(
       fontSize: 12.sp,
-      fontFamily: FontFamily.sFPro,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w500,
       letterSpacing: 0.15,
       color: AppColors.black3);
-  static TextStyle body2 = TextStyle(
+  static TextStyle body2 = GoogleFonts.lato(
       fontSize: 14.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.2,
       color: AppColors.whiteColor);
-  static TextStyle body3 = TextStyle(
+  static TextStyle body3 = GoogleFonts.lato(
       fontSize: 16.sp,
-      fontFamily: FontFamily.sFPro,
       fontWeight: FontWeight.w600,
       letterSpacing: 0.5.w,
       height: 1.5,

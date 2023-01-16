@@ -26,13 +26,11 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Builder(
@@ -41,7 +39,11 @@ class _MyHomePageState extends State<MyHomePage> {
           Dimens.width_design,
           Dimens.height_design,
         ),
-        builder: (context, _) => const SignUpScreen(),
+        builder: (context, _) => GestureDetector(
+            onTap: () {
+              FocusManager.instance.primaryFocus?.unfocus();
+            },
+            child: const SignUpScreen()),
       ),
     );
   }
