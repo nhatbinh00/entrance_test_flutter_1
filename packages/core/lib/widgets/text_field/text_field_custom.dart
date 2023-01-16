@@ -154,7 +154,7 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
       height: widget.height,
       child: TextFormField(
         minLines: 1,
-        maxLines: null,
+        maxLines: 1,
         keyboardType: widget.keyboardType,
         controller: widget.controller,
         focusNode: widget.focusNode,
