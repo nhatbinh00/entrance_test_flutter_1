@@ -2,9 +2,13 @@ import 'package:core/common/constants/colors.dart';
 import 'package:core/common/constants/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_entrance_test/auth/screens/widgets/spacer_widget.dart';
+import 'package:flutter_entrance_test/auth/screens/widgets/textfield_signup_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:core/widgets/text_field/text_field_custom.dart';
+import 'package:get/get.dart';
+import '../controller/sign_up_controller.dart';
+import '../dtos/enum/type_input.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -15,11 +19,12 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   bool isChecked = false;
-  bool _obscureText = true;
+  final SignUpController signUpCtrl = Get.put(SignUpController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -50,6 +55,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  //const SpacerWidget(),
                   Text(
                     "Let’s get you started!",
                     style: GoogleFonts.lato(
@@ -58,41 +64,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       fontSize: 22.sp,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    child: TextFieldCustom(
-                      showSuffixIcon: false,
-                      showPrefixIcon: false,
-                      backgroundColor: Colors.transparent,
-                      hint: 'Your email',
-                      style: AppStyles.body2.copyWith(
-                        color: Colors.white,
-                        fontSize: 15.sp,
-                      ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    child: TextFieldSignUpWidget(
+                      typeInput: TypeInput.Email,
+                      titleProp: 'Your email',
                     ),
                   ),
-                  TextFieldCustom(
-                    showSuffixIcon: true,
-                    showPrefixIcon: false,
-                    backgroundColor: Colors.transparent,
-                    hint: 'Your password',
-                    isSecure: _obscureText,
-                    style: AppStyles.body2.copyWith(
-                      color: Colors.white,
-                      fontSize: 15.sp,
-                    ),
-                    suffixIcon: IconButton(
-                        icon: Icon(
-                            _obscureText
-                                ? Icons.visibility_outlined
-                                : Icons.visibility_off_outlined,
-                            color: AppColors.primary),
-                        iconSize: 22.w,
-                        onPressed: () {
-                          setState(() {
-                            _obscureText = !_obscureText;
-                          });
-                        }),
+                  const TextFieldSignUpWidget(
+                    typeInput: TypeInput.Pw,
+                    titleProp: 'Your password',
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 50.h),
@@ -109,16 +90,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             height: 23.w,
                             decoration: BoxDecoration(
                               color: Colors.transparent,
-                              border:
-                              Border.all(color: AppColors.primary, width: 1),
+                              border: Border.all(
+                                  color: AppColors.primary, width: 1),
                               borderRadius:
-                              BorderRadius.all(Radius.circular(8.r)),
+                                  BorderRadius.all(Radius.circular(8.r)),
                             ),
                             child: isChecked
                                 ? const Icon(
-                              Icons.check,
-                              color: Colors.white,
-                            )
+                                    Icons.check,
+                                    color: Colors.white,
+                                  )
                                 : null,
                           ),
                         ),
@@ -128,7 +109,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Text(
                           'I am over 16 years of age',
                           style:
-                          AppStyles.subtitle1.copyWith(color: Colors.white),
+                              AppStyles.subtitle1.copyWith(color: Colors.white),
                         ),
                       ],
                     ),
@@ -138,7 +119,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     child: RichText(
                       text: TextSpan(
                         text:
-                        'By clicking Sign Up, you are indicating that you have read and agree to the ',
+                            'By clicking Sign Up, you are indicating that you have read and agree to the ',
                         children: [
                           TextSpan(
                             text: 'Terms of Service ',
@@ -154,7 +135,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 .copyWith(color: AppColors.primary),
                           ),
                         ],
-                        style: AppStyles.body1.copyWith(color: AppColors.black3),
+                        style:
+                            AppStyles.body1.copyWith(color: AppColors.black3),
                       ),
                     ),
                   ),
@@ -169,21 +151,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             color: Colors.white,
                           ),
                         ),
-                        Container(
-                          width: 54.w,
-                          height: 54.w,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: AppColors.primary),
-                            shape: BoxShape.circle,
-                          ),
-                          child: const Icon(
-                            Icons.arrow_forward,
-                            color: AppColors.primary,
-                          ),
-                        ),
+                        Obx(() => Container(
+                              width: 54.w,
+                              height: 54.w,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: signUpCtrl.validFormSignUp()
+                                      ? AppColors.primary
+                                      : AppColors.black4,
+                                ),
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.arrow_forward,
+                                color: signUpCtrl.validFormSignUp()
+                                    ? AppColors.primary
+                                    : AppColors.black4,
+                              ),
+                            ))
                       ],
                     ),
                   ),
+                  const SpacerWidget(),
                 ],
               ),
             ),

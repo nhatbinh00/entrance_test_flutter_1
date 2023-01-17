@@ -1,0 +1,1 @@
+enum TypeInput { Email, Pw }
