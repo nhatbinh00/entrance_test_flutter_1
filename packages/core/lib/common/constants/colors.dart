@@ -22,4 +22,8 @@ class AppColors {
   static const Color black8 = Color(0xFF212121);
 
   static const Color primary = Color(0xFF647FFF);
+
+  static const Color negative4 = Color(0xFFFFC9CE);
+  static const secondary = Color(0xFFC72127);
+
 }

@@ -158,6 +158,18 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///D:/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "fluttertoast",
+      "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "get",
       "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/get-4.6.5",
       "packageUri": "lib/",
@@ -186,6 +198,12 @@
       "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "lints",
@@ -410,7 +428,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-01-17T02:31:01.107890Z",
+  "generated": "2023-01-17T08:19:42.612411Z",
   "generator": "pub",
   "generatorVersion": "2.18.0"
 }

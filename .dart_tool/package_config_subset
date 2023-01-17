@@ -98,6 +98,10 @@ flutter_screenutil
 2.12
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.6.0/
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.6.0/lib/
+fluttertoast
+2.12
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.2/
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.2/lib/
 get
 2.15
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/get-4.6.5/
@@ -118,6 +122,10 @@ http_parser
 2.12
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.2/
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.2/lib/
+js
+2.16
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.4/
+file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.4/lib/
 lints
 2.17
 file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/lints-2.0.1/
@@ -270,4 +278,8 @@ flutter_test
 2.17
 file:///D:/flutter/packages/flutter_test/
 file:///D:/flutter/packages/flutter_test/lib/
+flutter_web_plugins
+2.17
+file:///D:/flutter/packages/flutter_web_plugins/
+file:///D:/flutter/packages/flutter_web_plugins/lib/
 2

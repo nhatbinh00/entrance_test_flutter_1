@@ -1,5 +1,6 @@
 import 'package:core/common/constants/colors.dart';
 import 'package:core/common/constants/styles.dart';
+import 'package:core/widgets/toast/toast_custom.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_entrance_test/auth/screens/widgets/spacer_widget.dart';
@@ -151,24 +152,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             color: Colors.white,
                           ),
                         ),
-                        Obx(() => Container(
-                              width: 54.w,
-                              height: 54.w,
-                              decoration: BoxDecoration(
-                                border: Border.all(
+                        Obx(() => GestureDetector(
+                          onTap: (){
+                            signUpCtrl.submitSignUp(context);
+                          },
+                          child: Container(
+                                width: 54.w,
+                                height: 54.w,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: signUpCtrl.validFormSignUp()
+                                        ? AppColors.primary
+                                        : AppColors.black4,
+                                  ),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.arrow_forward,
                                   color: signUpCtrl.validFormSignUp()
                                       ? AppColors.primary
                                       : AppColors.black4,
                                 ),
-                                shape: BoxShape.circle,
                               ),
-                              child: Icon(
-                                Icons.arrow_forward,
-                                color: signUpCtrl.validFormSignUp()
-                                    ? AppColors.primary
-                                    : AppColors.black4,
-                              ),
-                            ))
+                        ))
                       ],
                     ),
                   ),

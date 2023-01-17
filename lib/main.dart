@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'auth/screens/sign_up_screen.dart';
 import 'auth/screens/widgets/spacer_widget.dart';
 import 'package:get/get.dart';
-
+import 'package:core/utilities/global/app_navigator_key.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,9 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      navigatorObservers: [GetObserver()],
       home: const MyHomePage(),
     );
   }

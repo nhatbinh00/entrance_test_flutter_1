@@ -1,3 +1,8 @@
+import 'dart:ui';
+
+import 'package:core/utilities/global/app_navigator_key.dart';
+import 'package:core/widgets/toast/toast_custom.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:core/common/constants/constant.dart';
 import '../dtos/enum/level_pw.dart';
@@ -64,5 +69,36 @@ class SignUpController extends GetxController {
       return true;
     }
     return false;
+  }
+
+  void checkForm(BuildContext context) {
+    if (email.value.isEmpty) {
+      ToastCustom(context)
+          .showError('The email is required.');
+    } else {
+      if (!Utility.isValidEmail(email.value)) {
+        ToastCustom(context)
+            .showError('The email is not valid.');
+      } else {
+        if (pw.isEmpty) {
+          ToastCustom(context)
+              .showError('The password is required.');
+        } else {
+          if (levelPw.value != LevelPw.Good &&
+              levelPw.value != LevelPw.Strong) {
+            ToastCustom(context)
+                .showError('The password must be Good or Strong.');
+          }
+        }
+      }
+    }
+  }
+
+  void submitSignUp(BuildContext context) {
+    if (validFormSignUp()) {
+      // sign Up
+    } else {
+      checkForm(context);
+    }
   }
 }

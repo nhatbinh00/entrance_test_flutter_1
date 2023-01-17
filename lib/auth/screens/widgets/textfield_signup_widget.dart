@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:core/common/constants/colors.dart';
 import 'package:core/common/constants/styles.dart';
+import 'package:core/utilities/utility.dart';
 import 'package:core/widgets/text_field/text_field_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_entrance_test/auth/dtos/enum/level_pw.dart';
@@ -56,23 +57,43 @@ class _TextFieldSignUpWidgetState extends State<TextFieldSignUpWidget> {
     }
   }
 
-  Widget _buildEmailInput() => TextFieldCustom(
-        showSuffixIcon: false,
-        showPrefixIcon: false,
-        backgroundColor: Colors.transparent,
-        hint: 'Your email',
-        style: AppStyles.body2.copyWith(
-          color: Colors.white,
-          fontSize: 15.sp,
-        ),
-        onChanged: (email){
-          onChangeText(email);
-          signUpCtrl.setEmail(email);
-        },
-        onTap: () {
-          spacer.sink.add(true);
-        },
-        onEditingComplete: onComplete,
+  Widget _buildEmailInput() => Column(
+        children: [
+          TextFieldCustom(
+            showSuffixIcon: false,
+            showPrefixIcon: false,
+            backgroundColor: Colors.transparent,
+            hint: 'Your email',
+            style: AppStyles.body2.copyWith(
+              color: Colors.white,
+              fontSize: 15.sp,
+            ),
+            onChanged: (email) {
+              onChangeText(email);
+              signUpCtrl.setEmail(email);
+            },
+            onTap: () {
+              spacer.sink.add(true);
+            },
+            onEditingComplete: onComplete,
+          ),
+          Obx(
+            () => signUpCtrl.email.value.isNotEmpty ? Visibility(
+              visible: !Utility.isValidEmail(signUpCtrl.email.value),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: SizedBox(
+                    width: 1.sw,
+                    child: Text(
+                       'The email is not valid.',
+                      style: AppStyles.subtitle2.copyWith(
+                        color: AppColors.secondary,
+                      ),
+                    )),
+              ),
+            ):Container(),
+          )
+        ],
       );
 
   Widget _buildPwInput() => Column(
@@ -101,7 +122,7 @@ class _TextFieldSignUpWidgetState extends State<TextFieldSignUpWidget> {
               },
             ),
             border: InputBorder.none,
-            onChanged: (pw){
+            onChanged: (pw) {
               onChangeText(pw);
               signUpCtrl.validatePw(pw);
             },
@@ -110,10 +131,12 @@ class _TextFieldSignUpWidgetState extends State<TextFieldSignUpWidget> {
             },
             onEditingComplete: onComplete,
           ),
-          Obx(() => SizedBox(
-            width: 1.sw,
-            child: signUpCtrl.levelPw.value.toLevelWidget(),
-          ),)
+          Obx(
+            () => SizedBox(
+              width: 1.sw,
+              child: signUpCtrl.levelPw.value.toLevelWidget(),
+            ),
+          )
         ],
       );
 

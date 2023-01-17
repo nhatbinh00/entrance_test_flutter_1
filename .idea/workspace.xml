@@ -41,12 +41,14 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/core/lib/utilities" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/core/lib/utilities/global" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\utilities\global" />
+      <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\widgets" />
       <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\utilities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
