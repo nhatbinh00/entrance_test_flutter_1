@@ -28,28 +28,33 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2KOqZavEU85NvjUTIaHhRWe9n57" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="cidr.known.project.marker" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/core/lib/utilities/global" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/Admin/Documents/GitHub/entrance_test_flutter_1/lib/app/dependency_injection",
+    "settings.editor.selected.configurable": "flutter.settings",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\utilities\global" />
-      <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\widgets" />
-      <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\utilities" />
+      <recent name="C:\Users\Admin\Documents\GitHub\entrance_test_flutter_1\lib\app\dependency_injection" />
+      <recent name="C:\Users\Admin\Documents\GitHub\entrance_test_flutter_1\packages\core\lib" />
+      <recent name="C:\Users\Admin\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\utilities\helper\general" />
+      <recent name="C:\Users\Admin\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\utilities\global" />
+      <recent name="C:\Users\Admin\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\lib\auth" />

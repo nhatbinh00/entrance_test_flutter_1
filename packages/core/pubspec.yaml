@@ -16,6 +16,17 @@ dependencies:
   google_fonts: ^3.0.1
   rxdart: ^0.27.4
   fluttertoast: ^8.0.8
+  dio: ^4.0.0
+  get_it: ^7.2.0
+  injectable: ^1.5.3
+  dartz: ^0.10.1
+  internet_connection_checker: ^0.0.1+4
+  pretty_dio_logger: ^1.2.0-beta-1
+  shared_preferences: ^2.0.15
+  device_info_plus: ^3.2.3
+  package_info_plus: ^1.4.2
+  json_annotation: ^4.5.0
+  json_serializable: ^6.3.1
 
 
 dev_dependencies:
@@ -23,6 +34,8 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
   retrofit_generator: ^4.0.3+1
+  injectable_generator: ^1.5.4
+  build_runner: ^2.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

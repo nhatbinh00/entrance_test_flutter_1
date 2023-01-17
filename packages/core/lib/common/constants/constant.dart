@@ -9,4 +9,5 @@ class Constant {
   static const int offset = 1;
   static const int limit = 10;
   static int timeoutDuration = 15;
+  static String deviceCode = "DeviceCode";
 }
