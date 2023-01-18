@@ -111,12 +111,12 @@ class ErrorHandler implements Exception {
         if (error.response?.data != null && error.response?.data is Map) {
           ErrorResponse errorResponse =
               ErrorResponse.fromJson(error.response!.data);
-          if (errorResponse.error != null &&
-              errorResponse.error?.code != null &&
-              errorResponse.error?.message != null) {
+          if (errorResponse.errors != null &&
+              errorResponse.errors?.error != null &&
+              errorResponse.statusCode != null) {
             return Failure(
-                errorResponse.error!.code ?? ResponseCode.defaultError,
-                errorResponse.error!.message ?? ResponseMessage.defaultError);
+                errorResponse.statusCode ?? ResponseCode.defaultError,
+                errorResponse.errors?.error ?? ResponseMessage.defaultError);
           }
         }
         switch (error.response?.statusCode) {

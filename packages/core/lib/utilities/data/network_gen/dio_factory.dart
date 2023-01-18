@@ -30,7 +30,7 @@ abstract class DioFactory {
       RequestHeaders.accept: RequestHeaders.applicationJson,
     };
     dio.options = BaseOptions(
-        baseUrl: 'baseUrl',
+        baseUrl: 'http://streaming.nexlesoft.com:4000',
         connectTimeout: timeOut,
         receiveTimeout: timeOut,
         headers: headers);

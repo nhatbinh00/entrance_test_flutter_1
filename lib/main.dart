@@ -1,11 +1,19 @@
 import 'package:core/common/constants/dimens.dart';
+import 'package:core/utilities/global/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'auth/screens/sign_up_screen.dart';
-import 'auth/screens/widgets/spacer_widget.dart';
+import 'app/dependency_injection/di.dart';
+import 'app/dependency_injection/routes_manager.dart';
+
 import 'package:get/get.dart';
-import 'package:core/utilities/global/app_navigator_key.dart';
-void main() {
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+
+import 'modules/auth/screens/sign_up_screen.dart';
+import 'modules/auth/screens/widgets/spacer_widget.dart';
+
+void main() async {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  await DependencyInjection.init();
   runApp(const MyApp());
 }
 
@@ -16,9 +24,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialRoute: RouteName.signUp,
       debugShowCheckedModeBanner: false,
       navigatorObservers: [GetObserver()],
-      home: const MyHomePage(),
+      builder: EasyLoading.init(),
+      getPages: RouteGenerator.routes,
     );
   }
 }
