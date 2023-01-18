@@ -10,4 +10,7 @@ class Constant {
   static const int limit = 10;
   static int timeoutDuration = 15;
   static String deviceCode = "DeviceCode";
+  static const int pageNumber = 0;
+  static const int pageSize = 100;
+  static const String selectionCategoryKey = "selectionCategoryKey";
 }

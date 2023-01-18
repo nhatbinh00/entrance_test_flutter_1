@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:core/utilities/data/network_gen/failure.dart';
 import 'package:core/utilities/global/app_loading.dart';
+import 'package:core/utilities/global/app_login.dart';
 import 'package:core/utilities/global/app_navigator_key.dart';
 import 'package:core/utilities/global/route_name.dart';
 import 'package:core/widgets/toast/toast_custom.dart';
@@ -118,8 +119,12 @@ class SignUpController extends GetxController {
         ProgressHUD.dismiss();
         ToastCustom(context).showError(failure.message);
       }, (data) async {
+        if (data.token != null) {
+          AppLogin.setLogin(data.token!);
+        }
         ToastCustom(context).showSuccess('Sign Up Success!');
-        Get.toNamed(RouteName.categoriesPage);
+        Get.offAllNamed(RouteName.categoriesPage);
+
       }).whenComplete(() => ProgressHUD.dismiss());
     } else {
       checkForm(context);

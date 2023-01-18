@@ -17,6 +17,7 @@ class Strings {
   static const String pageSize = "pageSize";
   static const String pageIndex = "pageIndex";
   static const String page = "page";
+  static const String pageNumber = "pageNumber";
 
   static const String phone = "phone";
   static const String code = "code";

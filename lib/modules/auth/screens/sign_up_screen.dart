@@ -1,6 +1,7 @@
+import 'dart:io';
+
 import 'package:core/common/constants/colors.dart';
 import 'package:core/common/constants/styles.dart';
-import 'package:core/widgets/toast/toast_custom.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_entrance_test/modules/auth/screens/widgets/spacer_widget.dart';
@@ -31,13 +32,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            exit(0);
+          },
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
         ),
       ),
       body: Stack(
         children: [
-          Image.asset('assets/images/img_sign_up.jpg'),
+          SizedBox(
+            width: 1.sw,
+            child: Image.asset(
+              'assets/images/img_sign_up.jpg',
+              fit: BoxFit.fitWidth,
+            ),
+          ),
           Container(
             width: 1.sw,
             height: 1.sh,
@@ -154,10 +163,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                         ),
                         Obx(() => GestureDetector(
-                          onTap: (){
-                            signUpCtrl.submitSignUp(context);
-                          },
-                          child: Container(
+                              onTap: () {
+                                signUpCtrl.submitSignUp(context);
+                              },
+                              child: Container(
                                 width: 54.w,
                                 height: 54.w,
                                 decoration: BoxDecoration(
@@ -175,7 +184,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       : AppColors.black4,
                                 ),
                               ),
-                        ))
+                            ))
                       ],
                     ),
                   ),

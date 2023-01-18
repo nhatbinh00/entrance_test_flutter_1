@@ -13,9 +13,8 @@ class AppLogin {
   static Future init() async {
     type = AppLoginType.noToken;
     String? token = AppShared.share?.getString(Preferences.token);
-    var userInfo = AppShared.share?.getString(Preferences.userInfo);
     if (token != null) {
-      await savLogin(token, "");
+       savLogin(token);
     }
   }
 
@@ -30,19 +29,12 @@ class AppLogin {
     }
   }
 
-  static void setLogin(String accessToken,
-      {bool keepLogin = false, String phone = '', String name = ''}) async {
-    if (keepLogin) {
-      AppShared.share?.setString(Preferences.token, accessToken);
-      AppShared.share?.setString(Preferences.phoneNumber, phone);
-    } else {
-      AppShared.share?.remove(Preferences.phoneNumber);
-    }
-    savLogin(accessToken, phone);
+  static void setLogin(String accessToken) {
+    AppShared.share?.setString(Preferences.token, accessToken);
+    savLogin(accessToken);
   }
 
-  static Future savLogin(String token, String phoneNumber) async {
-    phone = phoneNumber;
+  static void savLogin(String token)  {
     accessToken = token;
     type = AppLoginType.hasToken;
   }

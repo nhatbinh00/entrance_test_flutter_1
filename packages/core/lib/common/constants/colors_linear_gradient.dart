@@ -7,9 +7,8 @@ class AppGradientColors {
 
   // button
   static const buttonPrimary = [
-    Color(0xffAB822F),
-    Color(0xffFFD463),
-    Color(0xffAB822F),
+    Color(0xff8A00FF),
+    Color(0xff8A32A9),
   ];
 
 }

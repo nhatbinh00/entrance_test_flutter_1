@@ -44,19 +44,20 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/app/dependency_injection" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/modules/categories" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\lib\modules\categories" />
       <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\lib\app\dependency_injection" />
       <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\utilities\global" />
       <recent name="C:\Users\Admin\Documents\GitHub\entrance_test_flutter_1\lib\app\dependency_injection" />
       <recent name="C:\Users\Admin\Documents\GitHub\entrance_test_flutter_1\packages\core\lib" />
-      <recent name="C:\Users\Admin\Documents\GitHub\entrance_test_flutter_1\packages\core\lib\utilities\helper\general" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\lib\modules" />
       <recent name="C:\Users\SWUser\Documents\GitHub\entrance_test_flutter_1\lib\auth" />
     </key>
   </component>
